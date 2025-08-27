@@ -1,0 +1,40 @@
+package torredevasos;
+
+public class TorredeVasos{
+
+    public static void calcularTotalVasos(int TotaldeVasosDisponibles){
+
+       int Vasosquesenecesitaran = 10;  
+
+       if (TotaldeVasosDisponibles < 0) {
+
+        System.out.println("La cantidad de vasos no puede ser negativa.");
+
+        return;
+
+       }
+
+        if (TotaldeVasosDisponibles == Vasosquesenecesitaran) {
+
+         System.out.println("Tienes los vasos disponibles para armar la torre");
+
+
+        } else if (TotaldeVasosDisponibles > Vasosquesenecesitaran) {
+
+            int sobrantes = TotaldeVasosDisponibles- Vasosquesenecesitaran;
+
+            System.out.println(" Ya puedes armar la torre te sobran " + sobrantes + " vasos.");
+
+        } else {
+
+            int faltantes =  Vasosquesenecesitaran- TotaldeVasosDisponibles;
+
+            System.out.println("No puedes armar la torre te faltan " + faltantes + " vasos.");
+
+        }
+
+       }
+
+ 
+}
+ 
